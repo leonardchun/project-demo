@@ -1,0 +1,43 @@
+<div class="res-check-common doc">
+	<div class="ui-box">
+		<div class="ui-steps blue" id="ui-steps" style="width:900px;"></div>
+	</div>
+	<div id="content1" class="hidden">
+		<table class="ui-grid-wire" id="getDataRes" cellspacing="0" width="100%">
+		</table>
+	</div>
+	<div id="content2" class="hidden">
+		<div class="ui-searchbar" style="height:60px;">
+			<form class="ui-searchbar-form form-inline" id="search-form">
+				  <div class="form-group">
+				    <label for="name">文件名</label>
+				    <input type="text" name="name" class="form-control" placeholder="请输入文件名">
+				  </div>
+				  <div class="form-group">
+				    <label for="name">文件类型</label>
+				    <select class="form-control" name="company">
+				    	<option value="-1">全部</option>
+				    	<option value="1">华为</option>
+				    	<option value="2">思科</option>
+				    	<option value="3">甲骨文</option>
+				    </select>
+				  </div>
+			</form>
+			<div class="ui-searchbar-buttonbar">
+				<button class="btn btn-info" id="search">查询</button>
+				<button class="btn btn-warning" id="reset">重置</button>
+			</div>
+		</div>
+		<table class="ui-grid-wire" id="selectFiles" cellspacing="0" width="100%">
+		</table>
+	</div>
+	<div id="content3" class="hidden">
+		
+	</div>
+</div>
+
+<script>
+	require(["app/resourceManage/publishResource/publishResource-publish-doc"],function(app){
+		app.main();
+	})
+</script>

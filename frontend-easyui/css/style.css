@@ -1,0 +1,14 @@
+
+
+.ui-box-abs{
+  float:left;
+  padding:5px;
+}
+.ui-box-abs.left{
+  width:50%;
+}
+.ui-box-abs.right{
+  width:50%;
+}
+
+

@@ -1,0 +1,45 @@
+<!--配置NTP-->
+<style>
+	.top{
+		padding: 100px;
+	}
+	.paddingLR{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.width100{
+		width: 100% !important;
+	}
+	.width60{
+		width: 60% !important;
+	}
+</style>
+<link href="../css/need/select2.min.css" rel="stylesheet" type="text/css">
+<div class="ui-content">
+	<form class="ui-searchbar-form form-inline top col-md-6" id="NTP-form">
+		<div class="form-group width100">
+		    <label for="name">NTP服务器地址：</label>
+		     <select class="form-control select2 width60" id="ntp" name="ntp">
+		     	<!--<option>bhjbk</option>	
+		     	<option>bhjbk</option>
+		     	<option>bhjbk</option>
+		     	<option>bhjbk</option>-->
+		     </select>
+		    <!--<select class = "width100 select2" name="ntp" id="ntp"></select>-->
+		    <!--<input type="text" class="form-control" id="ntp" name="ntp" placeholder="请输入NTP服务器地址">-->
+        </div>
+        
+	</form>
+	<div class="ui-searchbar-buttonbar top paddingLR col-md-2" >
+		<button class="btn btn-info search">提交</button>
+	</div>
+	<div class="top col-md-12">
+		<p><label for="" class="sbtb" >本设备在与“<span>20.125.20.21</span>”进行同步时同步成功</label></p>
+		<p><label for="" class="tbsj">最近同步时间：<span>2017-8-8:17:50</span></label></p>
+	</div>
+</div>
+<script>
+	require(["app/systemManage/configuringNTP/configuringNTP"],function(app){
+		app.main();
+	});
+</script>

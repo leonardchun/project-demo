@@ -1,0 +1,80 @@
+<div class="ui-content" style="top:3px;">
+	<div class="ui-aside left" id="treeAside">
+		<div class="search-box input-group">
+			<input type="text" class="form-control" placeholder="请输入资源名称">
+			<div class="input-group-addon handCursor"><i class="fa fa-search"></i></div>
+		</div>
+		<ul class="ztree ui-treebar" id="treebar"></ul>
+	</div>
+	<div class="ui-aside right" id="rightPage">
+		<!--父级菜单展示-->
+		<div id="parent_menu">
+			<div class="ui-grid-buttonbar">
+				<ul class="ui-grid-buttonGroup left">
+					<li><button class="btn btn-link add"><i class="fa fa-plus"></i><span>新增</span></button></li>
+					<li><button class="btn btn-link delete disabled"><i class="fa fa-trash-o"></i><span>删除</span></button></li>
+					<li><button class="btn btn-link modify disabled" key='1'><i class="fa fa-pencil"></i><span>修改</span></button></li>
+				</ul>
+				<ul class="ui-grid-buttonGroup right">
+					<li><button class="btn btn-link import"><i class="fa fa-arrow-down"></i><span>导入</span></button></li>
+					<li><button class="btn btn-link export"><i class="fa fa-arrow-up"></i><span>导出</span></button></li>
+				</ul>
+			</div>
+			
+			<div class="ui-gridbar">
+				<table id="example" class="ui-grid display" cellspacing="0" width="100%">
+					<thead>
+						<tr>						
+							<th><input type="checkbox" id="cball"/></th>
+							<th>目录名称</th>
+							<th>目录编码</th>
+							<th>目录审核节点</th>
+							<th>目录审核员</th>
+							<th>联系电话</th>
+							<th>审核单位</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+		<!--子级菜单展示-->
+		<div id="child_menu" style="display: none;">
+			<div class="ui-grid-buttonbar">
+				<ul class="ui-grid-buttonGroup left">
+					<li><button class="btn btn-link" id="catalog"><i class="fa fa-plus"></i><span>编目</span></button></li>
+					<li><button class="btn btn-link modify disabled" key='1'><i class="fa fa-pencil"></i><span>修改</span></button></li>
+					<li><button class="btn btn-link delete disabled"><i class="fa fa-trash-o"></i><span>删除</span></button></li>
+					<li><button class="btn btn-link modify disabled iconColorWrapper" key="3"><i class="fa fa-hand-pointer-o iconColor"></i><span>提交</span></button></li>
+					<li><button class="btn btn-link modify disabled iconColorWrapper" key="4"><i class="fa fa-thumb-tack iconColor"></i><span>审核</span></button></li>
+					<li><button class="btn btn-link modify disabled iconColorWrapper" key='2'><i class="fa fa-search iconColor"></i><span>查看流程</span></button></li>
+					<li><button class="btn btn-link import"><i class="fa fa-arrow-down"></i><span>导入资源</span></button></li>
+					<li><button class="btn btn-link import"><i class="fa fa-arrow-down"></i><span>导入数据项</span></button></li>
+					<li><button class="btn btn-link export"><i class="fa fa-arrow-up"></i><span>导出</span></button></li>
+				</ul>
+			</div>
+			<!--<form id="uploadForm" enctype="multipart/form-data">
+				<input type="file" name="file" id="file" value="" style="display: none;"/>
+			</form>-->
+			<div class="ui-gridbar">
+				<table id="example1" class="ui-grid display" cellspacing="0" width="100%">
+					<thead>
+						<tr>										
+							<th><input type="checkbox" id="cball1"/></th>
+							<th>资源名称</th>
+							<th>资源类型</th>
+							<th>编目节点</th>
+							<th>编目单位</th>
+							<th>资源状态</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<input type="hidden" id="currentTreeId"/>
+<script>
+	require(["app/catalogManage/catalogManage"],function(app){
+		app.main();
+	});
+</script>
